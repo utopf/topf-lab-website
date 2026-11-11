@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topf Lab - Research</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+   /* ===== BODY ===== */
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  margin: 0;
+  background-color: white;
+  color: black;
+  line-height: 1.8;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    url("banner1.png");
+  background-size: contain;
+  background-position: 5% 0%;
+  background-repeat: no-repeat;
+
+  color: black;
+  padding: 0.5rem;
+  min-height: 100px;
+ }
+
+   
+header h1 {
+  position: absolute;
+  bottom: 50px;
+  top: 30px;      /* move down */
+  left: 800px;     /* move right */
+
+  font-family: "Georgia", serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  color: #035333;
+}
+
+    /* ===== NAVIGATION ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #035333;
+  padding: 0.6rem 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+/* ===== MAIN  ===== */
+.main-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 1rem auto;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+    /* Main content area */
+.content {
+  flex: 3;
+  display: flex;
+  flex-direction: column; /* STACK boxes vertically */
+  gap: 2rem;              /* space between boxes */
+}
+/* First box inside main content */
+.content .title h2 {
+  font-size: 1.3rem;
+  color: #035333;
+}
+.content .title p {
+  font-size: 1rem;
+}
+
+/* All boxes inside main content */
+.box {
+  background-color: rgb(244, 247, 237);
+  padding: 2rem;
+  border-radius: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* ===== IMAGE + TEXT BOX (Oxiage) ===== */
+.oxiage-section .image-text,
+.research-image-section .image-text {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.image-box {
+  flex: 0 0 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.text-box {
+  flex: 1;
+  line-height: 1.6;
+}
+
+/* ===== FUNDING AND PROJECTS ===== */
+.projects {
+  margin-top: 2rem;
+}
+
+.funding-header {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #d5dfd1;
+}
+
+.funding-header h3 {
+  color: #035333;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.funding-header img {
+  display: block;
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.project-group h3 {
+  color: #035333;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.project-group ul {
+  padding-left: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+}
+
+.project-group li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.project-group a {
+  color: #035333;
+  text-decoration: none;
+}
+
+.project-group a:hover {
+  text-decoration: underline;
+}
+
+
+.funding-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.funding-logos img {
+  max-width: 280px;
+  max-height: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.funding-logos img.ncn-logo {
+  max-width: 360px;
+  max-height: 180px;
+}
+
+.projects {
+  background-color: white;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #035333;
+  padding: 0.8rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+  .main-container {
+    flex-direction: column; /* sidebar on top, content below */
+  }
+  .oxiage-section .image-text {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-box {
+    width: 100%;
+  }
+  .image-box img {
+    max-width: 90%;
+  }
+}
+  
+  </style>
+</head>
+
+
+
+<body>
+<header>
+  <h1> Research</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>  
+  <a href="research.html">Research</a>
+  <a href="team.html">Team</a>
+  <a href="publication.html">Publications</a>
+  <a href="join.html">Join us!</a>
+  <a href="news.html">News</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main class="main-container">
+  <!-- Main content -->
+    <section class="content">
+      <div class="title">
+     <p>
+        Aging is accompanied by an early and progressive decline in proteostasis—the cellular network that maintains protein quality and function—contributing to functional deterioration and age-associated disease. 
+        Our lab aims to understand the molecular mechanisms that drive this early loss of proteostasis with a particular focus on the consequences of oxidative stress on the proteome.
+        We integrate biochemical, genetic, and quantitative proteomics approaches in <i>Saccharomyces cerevisiae</i> and <i>Caenorhabditis elegans</i> to understand principles of proteostasis control. 
+
+    <h2>Current research focus</h2>
+        
+      </p>
+    </div>
+      <!-- BOX 2: Oxiage Image + Text -->
+    <div class="box oxiage-section">
+      <div class="image-text">
+        
+<div class="image-box">
+  <img src="oxiage.png" alt="OxiAge research">
+  <p>Cross species comparison of oxidation changes during aging</p>
+</div>
+
+        <div class="text-box">
+          <h3>Protein oxidation landscapes during aging</h3>
+          <p>
+            Oxidative stress is a universal phenomenon during cellular aging influencing protein structure, function, and stability. We investigate how oxidative protein modifications change during aging 
+            and how they contribute to the decline of cellular proteostasis. By combining proteomics with targeted biochemical approaches, we aim to map these modifications, distinguish reversible from 
+            irreversible changes, and identify proteins that may be particularly vulnerable to age-related oxidation. Explore our <a href="http://oxiage.ibb.waw.pl/" target="_blank">database</a> to discover patterns of reversible thiol oxidation during aging.
+            <br><br> <strong>Further reading</strong>
+            <a 
+            href="https://www.life-science-alliance.org/content/7/5/e202302300"
+           target="_blank">
+          <br>Jonak et al. LSA, 2024
+        </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+        
+    <!-- BOX 3: Research topic 1 with image -->
+<div class="box research-image-section">
+  <div class="image-text">
+
+    <div class="image-box">
+      <img src="Jonak.jpg" alt="Protein synthesis regulation">
+          </div>
+
+    <div class="text-box">
+      <h3>Protein synthesis regulation during aging</h3>
+      <p>
+        The ribosome regulates proteostasis by tuning protein synthesis in response 
+        to cellular conditions and is a hub for regulating longevity. We study the 
+        impact of oxidative modifications on ribosomal proteins as well as changes 
+        in ribosome composition and ribosome associated proteins during stress and aging. How is the ribosome 
+        different in young and aged cells? How does composition impact translation and 
+        translational output? What are the consequences for cellular proteostasis?
+        <br><br> <strong>Further reading</strong>
+            <a 
+            href="https://academic.oup.com/nar/article/53/16/gkaf807/8244594?login=false"
+           target="_blank">
+          <br>Zadali et al, NAR, 2025
+           </a>
+           <a 
+            href="https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.70419"
+           target="_blank">
+          <br>Topf, FEBS Journal, 2026
+           </a>
+           <a 
+            href="https://www.biorxiv.org/content/10.64898/2026.06.13.732051v1"
+           target="_blank">
+          <br>Liput et al, bioRxiv, 2026
+           </a>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+ <!-- BOX 4: Research topic 3 -->
+    <div class="box research-image-section">
+  <div class="image-text">
+
+    <div class="image-box">
+      <img src="Jonak.png" alt="Protein synthesis regulation">
+    </div>
+
+    <div class="text-box">
+      <h3>Ribosomes in zinc homeostasis</h3>
+      <p>
+        Zinc is essential for protein structure, cellular function, and proteostasis, yet its availability changes during aging. We investigate how ribosomal proteins contribute
+        to zinc homeostasis and how zinc availability influences ribosome composition, protein synthesis, and cellular health. By exploring the interplay between zinc metabolism and 
+        ribosome function, we aim to uncover mechanisms that connect micronutrient balance with proteostasis and healthy aging.
+        <br><br> <strong>Further reading</strong>
+            <a 
+            href="https://www.sciencedirect.com/science/article/pii/S2213231726001503?via%3Dihub"
+           target="_blank">
+          <br>Jonak and Topf, Redox Biology, 2026
+           </a>
+           <a 
+            href="https://www.biorxiv.org/content/10.64898/2026.10.07.757281v1"
+           target="_blank">
+          <br>Kumar et al, bioRxiv, 2026
+           </a>
+      </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOX 4: Research topic 4 -->
+    <div class="box research-image-section">
+  <div class="image-text">
+
+    <div class="image-box">
+      <img src="Gowda.png" alt="Protein synthesis regulation">
+    </div>
+
+    <div class="text-box">
+      <h3>Modulating healthspan via drug repurposing and micronutrients</h3>
+      <p>
+        We aim to modulate healthspan by repurposing approved drugs and optimizing micronutrient availability to enhance cellular 
+        resilience during aging. By developing molecular sensors and scalable healthspan screens, we want to systematically identify 
+        interventions that improve physiological function and stress resistance in aging models.
+      <br><br> <strong>Further reading</strong>
+            <a 
+            href="https://link.springer.com/article/10.1186/s12964-025-02592-3"
+           target="_blank">
+          <br>Gowda et al, Cell Commun Signal, 2026
+           </a>
+           
+      </p>
+    </div>
+   </div>
+</div>
+<!-- FUNDING AND PROJECTS -->
+<div class="box projects">
+
+  <div class="funding-header">
+    <h3>Our research is funded by </h3>
+  <div class="funding-logos">
+  <img src="ncn2.png" alt="National Science Centre Poland" class="ncn-logo">
+  <img src="IBB.jpg" alt="Institute of Biochemistry and Biophysics">
+</div>
+  </div>
+
+  
+<div class="project-lists">
+
+  <div class="project-group">
+    <h3>Ongoing projects</h3>
+    <ul>
+      <li>
+        <a href="https://projekty.ncn.gov.pl/en/index.php?projekt_id=572690" target="_blank">
+          2022/47/D/NZ3/01740
+        </a>
+        (Sonata-18; PI: Katarzyna Jonak)
+        <br><em>Investigation of cellular responses to ribosomal protein oxidation during ageing</em>
+      </li>
+      <li>
+        <a href="https://projekty.ncn.gov.pl/en/index.php?projekt_id=555721" target="_blank">
+          2022/45/B/NZ1/03714
+        </a>
+        (Opus-23; PI: Ulrike Topf)
+        <br><em>Molecular function of zinc storage in ribosomal proteins of eukaryotic cells</em>
+      </li>
+      <li>
+        <a href="https://projekty.ncn.gov.pl/en/?projekt_id=454849" target="_blank">
+          2019/34/E/NZ1/00367
+        </a>
+        (Sonata Bis-9; PI: Ulrike Topf)
+        <br><em>How does ribosome heterogeneity contribute to cellular stress defense?</em>
+      </li>
+    </ul>
+  </div>
+
+  <div class="project-group">
+    <h3>Completed projects</h3>
+    <ul>
+      <li>
+        2022/06/X/NZ1/00757 (Miniatura-6; PI: Kamila Liput)
+      </li>
+      <li>
+        DEC-MG-05-22-03 (IBB internal grant to Kamila Liput)
+      </li>
+      <li>
+        <a href="https://projekty.ncn.gov.pl/en/?projekt_id=432823" target="_blank">
+          2018/31/B/NZ1/02401
+        </a>
+        (Opus-16; PI: Ulrike Topf)
+        <br><em>Characterisation of function and substrate binding of the prefoldin chaperone in physiology and cellular stress</em>
+      </li>
+      <li>
+        <a href="https://projekty.ncn.gov.pl/en/?projekt_id=310395" target="_blank">
+          2015/19/B/NZ1/03444
+        </a>
+        (Opus-10; PI: Ulrike Topf)
+        <br><em>Mechanisms protecting from oxidative damage during aging</em>
+      </li>
+      <li>
+        DEC-MG-4/22-03 (IBB internal grant to Katarzyna Jonak)
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+</div>
+  </section>
+  
+</main>
+
+<footer>
+  © Topf Lab
+</footer>
+
+
+
+</body>
+</html>

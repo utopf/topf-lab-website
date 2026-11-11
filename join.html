@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topf Lab </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+===============================
+   BASE
+===============================
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;   /* ← THIS is what makes nav reach screen edges */
+}
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  margin: 0;
+  color: black;
+  line-height: 1.8;
+  background: white;
+}
+
+/* ===============================
+   HEADER  (same as research page)
+=================================*/
+/* ===== HEADER (same as Research page) ===== */
+header {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    url("banner1.png");
+  background-size: contain;
+  background-position: 5% 0%;
+  background-repeat: no-repeat;
+
+  color: black;
+  padding: 0.5rem;
+  min-height: 100px;
+}
+
+/* title position inside banner */
+header h1 {
+  position: absolute;
+  bottom: 50px;
+  top: 30px;      /* move down */
+  left: 800px;     /* move right */
+
+  font-family: "Georgia", serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  color: #035333;
+}
+
+/* ===============================
+   NAVIGATION  (same as research)
+=================================*/
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #035333;
+  padding: 0.6rem 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: 500;
+}
+
+nav a:hover { text-decoration: underline; }
+
+/* ===============================
+   MAIN BACKGROUND
+=================================*/
+main {
+  background: rgb(244, 247, 237);
+  padding: 3rem 0;
+}
+
+/* centered content like research page */
+.content-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ===============================
+   GENERIC WHITE BOX STYLE
+=================================*/
+.join-box {
+  background: white;
+  padding: 2rem;
+}
+
+/* ===============================
+   PHD BOX (image + text)
+=================================*/
+.join-phd {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.join-phd-text { flex: 2; }
+
+.join-phd-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.join-phd-image img {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* ===============================
+   EMAIL STYLE
+=================================*/
+.contact-email {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: #035333;
+}
+
+/* ===============================
+   FOOTER (same as research)
+=================================*/
+footer {
+  background: #035333;
+  padding: 0.8rem;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   RESPONSIVE
+=================================*/
+@media (max-width: 800px) {
+  .join-phd {
+    flex-direction: column;
+  }
+  .join-phd-image {
+    justify-content: center;
+  }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Join us</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>  
+  <a href="research.html">Research</a>
+  <a href="team.html">Team</a>
+  <a href="publication.html">Publications</a>
+  <a href="join.html">Join us!</a>
+  <a href="news.html">News</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  
+  <div class="content-container">
+
+    <section class="join-box join-phd">
+  <div class="join-phd-text">
+    <h2>PhD Student Positions</h2>
+    <p>
+      Our PhD students are part of the
+      <strong>
+        <a href="https://ibb.edu.pl/en/phd-studies/doctoral-school-of-molecular-biology-and-biological-chemistry/"
+           target="_blank">
+          <br>The Doctoral School of Molecular Biology and Biological Chemistry
+        </a>
+      </strong>
+      of IBB PAS.
+      Admissions to the Doctoral School take place twice a year, in March and October.
+      Check <a href="https://ibb.edu.pl/en/phd-studies/rekrutacja/" target="_blank">here</a>
+      for open positions.
+    </p>
+  </div>
+
+  <div class="join-phd-image">
+    <img src="school.jpg" alt="PhD school">
+  </div>
+</section>
+
+
+    <section class="join-box">
+      <h2>Postdoctoral Positions</h2>
+      <p>
+        We currently don`t have funded postions for <strong>Postdoctoral Researchers</strong>.
+        If you share our passion about proteostasis regulation during aging we are happy to explore potential research projects and funding opportunities,
+        including postdoctoral fellowships from <strong>NAWA</strong>, <strong>EMBO</strong>, and <strong>MSCA</strong>.
+      </p>
+      
+      <p>
+        While our research is largely driven by experimental wet-lab work, we are particularly enthusiastic about candidates who are interested in integrating proteomics data analysis and/or structural approaches into their research. 
+        Get in contact and send your <strong>CV</strong> and a brief summary of your <strong>research interests</strong>.
+      </p>
+    </section>
+
+    <section class="join-box">
+    <h2>Bachelor/Master/Interships</h2>
+      <p>
+        Interested in molecular biology, cell biology, biochemistry? 
+        We offer Bachelor and Master thesis projects. 
+      </p>
+      <p>We welcome enthusiastic students for research internships who wish to gain hands-on experience in the wet-lab and learn more about the work do in our lab.</p>
+      
+      <p class="contact-email">
+        For informal inquiries, send an email to Ulrike (utopf@ibb.waw.pl)
+      </p>
+    </section>
+
+  </div>
+</main>
+
+  
+
+
+<footer>
+  © Topf Lab
+</footer>

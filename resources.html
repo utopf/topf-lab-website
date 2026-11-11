@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topf Lab - Publications</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      margin: 0;
+      background-color: #f4f5f7;
+      color: #1f1f1f;
+      line-height: 1.8;
+    }
+
+    /* ===== HEADER ===== */
+header {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    url("banner1.png");
+  background-size: contain;
+  background-position: 5% 0%;
+  background-repeat: no-repeat;
+
+  color: black;
+  padding: 0.5rem;
+  min-height: 100px;
+ }
+
+   
+header h1 {
+  position: absolute;
+  bottom: 50px;
+  top: 30px;      /* move down */
+  left: 800px;     /* move right */
+
+  font-family: "Georgia", serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  color: #035333;
+}
+
+    /* ===== NAVIGATION ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #035333;
+  padding: 0.6rem 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+main {
+  background: rgb(244, 247, 237);
+  padding: 3rem 0;
+}
+/* Center page content */
+.content-container {
+  max-width: 1200px;
+  margin: auto;
+}
+/* centered content like research page */
+.resource-box {
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: white;
+}
+
+/* Title styling */
+.resource-box h1 {
+  margin-top: 0;
+  margin-bottom: 0rem;
+  color: #035333;
+  font-size: 1.5rem;
+}
+
+/* Text styling */
+.resource-box p {
+  margin-top: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.resource-image {
+  margin-top: rem;   /* space below paragraph */
+  width: 100%;          /* responsive */
+  max-width: 900px;     /* limit size */
+  height: auto;
+  display: block;
+}   
+.graphical-abstract {
+  width: 60%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== VIDEO RESOURCE ===== */
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.resource-link {
+  display: block;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  font-size: 1rem;
+  color: #035333;
+  text-decoration: none;
+}
+
+.resource-link:hover {
+  text-decoration: underline;
+}   
+
+
+   
+
+     /* ===== FOOTER ===== */
+footer {
+  background-color: #035333;
+  padding: 0.8rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>Resources</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>  
+  <a href="research.html">Research</a>
+  <a href="team.html">Team</a>
+  <a href="publication.html">Publications</a>
+  <a href="join.html">Join us!</a>
+  <a href="news.html">News</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <div class="content-container">
+<!-- RESOURCE 1: RIBOSOME BIOGENESIS PROTOCOL -->
+<section class="resource-box">
+
+  <h1>Protocol to analyze steps of ribosome biogenesis in nuclear and cytosolic fractions of yeast cells</h1>
+<a href="protocol1.pdf"
+     download
+     class="resource-link">
+    Download protocol (PDF)
+  </a>
+  <img
+  src="Graphical abstract 1200.jpg"
+  alt="Graphical abstract illustrating the yeast ribosome biogenesis protocol"
+  class="graphical-abstract">
+
+  
+
+</section>
+  <!-- RESOURCE 2: OxiAge Database -->
+  <section class="resource-box">
+    <h1>OxiAge Database</h1>
+
+    <a href="http://oxiage.ibb.waw.pl/" target="_blank" class="resource-link">
+      http://oxiage.ibb.waw.pl/
+    </a>
+
+    <p>
+      Resource created by our lab that collects data on reversible oxidation
+      of protein cysteine residues during aging in S. cerevisiae,
+      C. elegans, D. melanogaster and M. musculus.
+    </p>
+
+    <img src="oxweb.png" alt="OxiAge database screenshot" class="resource-image">
+  </section>
+
+  <!-- RESOURCE 3: LECTURE -->
+<section class="resource-box">
+  <h1>Lecture given by Ulrike for the Polish Biochemical Society </h1>
+
+  <p>
+    <strong>June 10th, 2021</strong>
+  </p>
+
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/eO6K1afSRz8"
+      title="Lecture by Ulrike for the Polish Biochemical Society"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  © Topf Lab
+</footer>

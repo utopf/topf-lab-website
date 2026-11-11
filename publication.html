@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topf Lab - Publications</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* ===== BODY ===== */
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  margin: 0;
+  background-color: white;
+  color: black;
+  line-height: 1.8;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    url("banner1.png");
+  background-size: contain;
+  background-position: 5% 0%;
+  background-repeat: no-repeat;
+
+  color: black;
+  padding: 0.5rem;
+  min-height: 100px;
+ }
+
+   
+header h1 {
+  position: absolute;
+  bottom: 50px;
+  top: 30px;      /* move down */
+  left: 800px;     /* move right */
+
+  font-family: "Georgia", serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  color: #035333;
+}
+
+    /* ===== NAVIGATION ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #035333;
+  padding: 0.6rem 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+main {
+  background: rgb(244, 247, 237);
+  padding: 3rem 0;
+}
+/* centered content like research page */
+.content-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: white;
+}
+ /* ===============================
+   GENERIC WHITE BOX STYLE
+=================================*/
+ 
+
+    ul.publications {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul.publications li {
+      margin-bottom: 1.5rem;
+    }
+
+    ul.publications li a {
+      color: #1f2f46;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    ul.publications li a:hover {
+      text-decoration: underline;
+    }
+
+    .authors, .journal {
+      font-style: italic;
+      font-weight: normal;
+      color: #555;
+    }
+
+     /* ===== FOOTER ===== */
+footer {
+  background-color: #035333;
+  padding: 0.8rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>Publications</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>  
+  <a href="research.html">Research</a>
+  <a href="team.html">Team</a>
+  <a href="publication.html">Publications</a>
+  <a href="join.html">Join us!</a>
+  <a href="news.html">News</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <div class="content-container">
+  <ul class="publications" id="publications">
+    <!-- Publications will be added here automatically -->
+  </ul>
+  </div>
+</main>
+
+<footer>
+  © Topf Lab
+</footer>
+
+<script>
+  // ======== Add new publications here ========
+  const publications = [
+    {
+      title: "Zinc preserves translational proteostasis to counteract aging and proteotoxicity in Caenorhabditis elegans.",
+      link: "https://www.biorxiv.org/content/10.64898/2026.10.07.757281v1",
+      authors: "<strong>Kumar A., Liput K.P., Jonak K.</strong>, Mazgaj R., <strong>Gowda S., Miążek M.</strong>, Waldron K.J., <strong>Topf U.</strong>",
+      journal: "BioRxiv, 2026"
+    },{
+      title: "Rpl40/eL40 ribosomal protein paralogs couple cytosolic translation to mitochondrial proteome and lipid homeostasis",
+      link: "https://www.biorxiv.org/content/10.64898/2026.06.13.732051v1",
+      authors: "<strong>Liput K.P., Gościńska K., Stasiak M.</strong>, Radkiewicz M., <strong> Shahmoradi Ghahe S., Jonak K.</strong>, Kucharczyk R., Więsyk A., Molestak E., Tchórzewski M., Macias M., Szybińska A., <strong>Topf U.</strong>",
+      journal: "BioRxiv, 2026"
+    },
+    {
+      title: "Integrated analysis of the redoxome and zinc proteome links ribosomal protein oxidation to zinc homeostasis.",
+      link: "https://doi.org/10.1016/j.redox.2026.104152",
+      authors: "<strong>Jonak K., Topf U.</strong>",
+      journal: "Redox Biology, 2026"
+    },
+    {
+      title: "Protocol to analyze steps of ribosome biogenesis in nuclear and cytosolic fractions of yeast cells.",
+      link: "https://doi.org/10.1016/j.xpro.2026.104429",
+      authors: "<strong>Zadali R., Topf U.</strong>",
+      journal: "STAR Protocols, 2026"
+    },
+    {
+      title: "Molecular chaperones and proteostasis regulation during cytosolic translation.",
+      link: "https://doi.org/10.1111/febs.70419",
+      authors: "<strong>Topf U.</strong>",
+      journal: "FEBS Journal, 2026"
+    },
+    {
+      title: "Unlocking neuronal health: Leveraging C. elegans for drug repurposing studies.",
+      link: "https://doi.org/10.1186/s12964-025-02592-3",
+      authors: "<strong>Gowda S., Kumar A., Topf U.</strong>",
+      journal: "Cell Communication and Signaling, 2026"
+    },
+    {
+      title: "Ribosomal protein Rps29/uS14 contributes to 18S rRNA maturation and its abundance regulates osmotic stress response in S. cerevisiae.",
+      link: "https://doi.org/10.1093/nar/gkaa1234",
+      authors: "<strong>Zadali R.</strong>, Tomecki R., <strong>Topf U.</strong>",
+      journal: "Nucleic Acids Research, 2025"
+    },
+    {
+      title: "Identification of a non-canonical function of prefoldin subunit 5 in proteasome assembly.",
+      link: "https://doi.org/10.1016/j.jmb.2024.168838",
+      authors: "<strong>Shahmoradi Ghahe S.</strong>, Drabikowski K., <strong>Stasiak M.</strong>, <strong>Topf U.</strong>",
+      journal: "Journal of Molecular Biology, 2024"
+    },
+    {
+      title: "Analysis of ageing-dependent thiol oxidation reveals early oxidation of proteins involved in core proteostasis functions. ",
+      link: "https://doi.org/10.26508/lsa.202302300",
+      authors: "<strong>Jonak K.</strong>, Suppanz I., Julian B., Chacinska A., Warscheid B., <strong>Topf U.</strong>",
+      journal: "Life Science Alliance, 2024"
+    },
+    {
+      title: "Prefoldin 2 contributes to mitochondrial morphology and function.",
+      link: "https://doi.org/10.1186/s12915-023-01695-y",
+      authors: "<strong>Tahmaz I., Shahmoradi Ghahe S., Stasiak M., Liput K.P., Jonak K., Topf U.</strong>",
+      journal: "BMC Biology, 2023"
+    },
+    {
+      title: "Prefoldin function in cellular protein homeostasis and human diseases.",
+      link: "https://doi.org/10.3389/fcell.2021.816214",
+      authors: "<strong>Tahmaz I.#, Shahmoradi Ghahe S.#, Topf U.</strong>",
+      journal: "Frontiers in Cell and Developmental Biology, 2022"
+    },
+    {
+      title: "Proteasome activity contributes to pro-survival response upon mild mitochondrial stress in Caenorhabditis elegans.",
+      link: "https://doi.org/10.1371/journal.pbio.3001302",
+      authors: "Sladowska M.#, Turek M.#, Kim M-J, Drabikowski K., Mussulini B.H.M., Mohanraj K., Serwa R.A., <strong>Topf U.</strong>*, Chacinska A.*",
+      journal: "PLOS Biology, 2021"
+    },
+    {
+      title: "Eukaryotic Elongation Factor 3 Protects Saccharomyces cerevisiae Yeast from Oxidative Stress.",
+      link: "https://doi.org/10.3390/genes11121432",
+      authors: "<strong>Gościńska K., Shahmoradi Ghahe S., Domagała S., Topf U.</strong>",
+      journal: "Genes, 2020"
+    },
+    {
+      title: "The evolving role of ribosomes in the regulation of protein synthesis.",
+      link: "https://doi.org/10.18388/abp.2020_5384",
+      authors: "<strong>Gościńska K.* and Topf U.</strong>",
+      journal: "Acta Biochimica Polonica, 2020"
+    },
+    {
+      title: "Mitochondrial stress-dependent regulation of cellular protein synthesis.",
+      link: "https://doi.org/10.1242/jcs.226258",
+      authors: "<strong>Topf U.*</strong>, Uszczynska-Ratajczak B., Chacinska A.*",
+      journal: "Journal of Cell Science, 2019"
+    },
+    {
+      title: "Teneurins ancient function in tissue organization and neuronal guidance in the nematode Caenorhabditis elegans.",
+      link: "https://doi.org/10.3389/fnins.2019.00205",
+      authors: "<strong>Topf U.</strong> and Drabikowski K.",
+      journal: "Frontiers in Neuroscience, 2019"
+    },
+    {
+      title: "Quantitative proteomics identifies redox switches for global translation modulation by mitochondrially produced reactive oxygen species.",
+      link: "https://doi.org/10.1038/s41467-017-02694-8",
+      authors: "<strong>Topf U.</strong>*, Suppanz I.*,  Samluk L., Wrobel L., Böser A., Sakowska P., Knapp B., Pietrzyk M.K. , Chacinska A., Warscheid B.",
+      journal: "Nature Communications, 2018"
+    },
+    {
+      title: "Chatty Mitochondria: Keeping Balance in Cellular Protein Homeostasis.",
+      link: "https://doi.org/10.1016/j.tcb.2016.03.002",
+      authors: "<strong>Topf U.</strong>, Wrobel L., Chacinska A.",
+      journal: "Trends in Cell Biology, 2016"
+    },
+    {
+      title: "Mistargeted mitochondrial proteins activate a proteostatic response in the cytosol.",
+      link: "https://doi.org/10.1038/nature14951",
+      authors: "Wrobel L.*, <strong>Topf U.</strong>*, Bragoszewski P., Wiese S., Sztolsztener M. E., Oeljeklaus S., Varabyova A., Lirski M., Chroscicki P., Mroczek S., Januszewicz E., Dziembowski A., Koblowska M., Warscheid B. and Chacinska A.",
+      journal: "Nature, 2015"
+    }
+    // Add more publications below by copying this format
+  ];
+
+  const ul = document.getElementById("publications");
+  publications.forEach(pub => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${pub.link}" target="_blank">${pub.title}</a>
+                    <div class="authors">${pub.authors}</div>
+                    <div class="journal">${pub.journal}</div>`;
+    ul.appendChild(li);
+  });
+</script>
+
+</body>
+</html>

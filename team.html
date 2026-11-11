@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topf Lab - team</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+/*===============================
+   BASE
+===============================*/
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: black;
+  line-height: 1.8;
+  background: white;   /* header stays white */
+}
+
+
+
+
+/* ===============================
+   HEADER  (IDENTICAL to Research)
+=================================*/
+header {
+  position: relative;
+  height: 120px;          /* fixed banner height */
+  padding: 0;
+  background-color: white;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+    url("banner1.png");
+  background-size: contain;
+  background-position: 5% 0%;
+  background-repeat: no-repeat;
+}
+
+header h1 {
+  position: absolute;
+  top: 30px;
+  left: 800px;
+  margin: 0;
+  font-family: "Georgia", serif;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: #035333;
+}
+
+/* ===============================
+   NAVIGATION (IDENTICAL)
+=================================*/
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #035333;
+  padding: 0.6rem 2rem;
+ }
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+ 
+ /* green page background area */
+main {
+  background-color: rgb(244, 247, 237);
+  padding: 3rem 1rem;
+}
+
+
+/* TEAM SECTION */
+.team-section {
+  max-width: 1200px;
+  margin: 0.3rem auto;
+  padding: 0 1rem;
+}
+
+.team-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+/* Team container - 3 per row */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;      /* allow wrapping on smaller screens */
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Individual team member box */
+.team-member {
+  background-color: white;
+  padding: 2rem 1rem;
+  border-radius: 0;         /* no round edges */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  width: 30%;               /* 3 per row */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Circle image */
+.member-image1 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 0.75rem auto;
+}
+
+.member-image1 img {
+   width: 160%;                /* slight zoom out */
+  height: 160%;
+  object-fit: cover;
+  object-position: 50% 20%;   /* adjust horizontal & vertical positioning */
+}
+.member-image2 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 0.75rem auto;
+}
+
+.member-image2 img {
+   width: 100%;                /* slight zoom out */
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;   /* adjust horizontal & vertical positioning */
+}
+
+.member-image3 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 0.75rem auto;
+}
+
+.member-image3 img {
+   width: 110%;                /* slight zoom out */
+  height: 110%;
+  object-fit: cover;
+  object-position: 30% 160%;   /* adjust horizontal & vertical positioning */
+}
+
+.member-image4 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 0.75rem auto;
+}
+
+.member-image4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 5%;
+  transform: scale(1);  /* 10% zoom in */
+  transform-origin: center center;
+}
+
+
+.member-image5 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 0.75rem auto;
+}
+
+.member-image5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% -10%;
+  transform: scale(1.2);  /* 10% zoom in */
+  transform-origin: center center;
+}
+
+
+.member-image6 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 0.75rem auto;
+}
+
+.member-image6 img {
+   width: 100%;                /* slight zoom out */
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;   /* adjust horizontal & vertical positioning */
+}
+
+.member-image7 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 0.75rem auto
+  
+}
+
+.member-image7 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.5);        /* optional zoom */
+  object-position: 50% -10%;
+  transform-origin: center center;
+  }
+
+
+
+.member-image8 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 0.75rem auto;
+}
+
+.member-image8 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 90% 50%;
+  transform: scale(1.1);  /* 10% zoom in */
+  transform-origin: center center;
+}
+
+.member-image9 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 0.75rem auto;
+}
+
+.member-image9 img {
+   width: 100%;                /* slight zoom out */
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;   /* adjust horizontal & vertical positioning */
+}
+
+/* Name & position */
+.team-member h3 {
+  margin: 0.5rem 0 0.2rem 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.team-member p {
+  margin: 0 0 1rem 0;
+  color: #555;
+}
+
+/* Profile button */
+.profile-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #035333;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.profile-btn:hover {
+  background-color: #02784c;
+}
+
+
+
+/* ===== IMAGE SLIDER ===== */
+.image-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 3rem 0;
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 560px;
+  max-width: 100%;
+}
+
+.slider-image {
+  width: 560px;
+  height: 480px;
+  background-color: #f4f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide-caption {
+  min-height: 1.5em;
+  margin: 1rem 0 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #444;
+  font-style: italic;
+}
+
+/* Buttons */
+.slider-btn {
+  background-color: #035333;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.slider-btn:hover {
+  background-color: #023d26;
+}
+
+
+
+/* ===== LIFE IN THE LAB SECTION ===== */
+.lab-life {
+  overflow: hidden;
+  margin: 4rem 0;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.lab-life h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .image-slider {
+    gap: 0.4rem;
+  }
+
+  .slider-content {
+    width: 100%;
+  }
+
+  .slider-image {
+    width: 100%;
+    height: 350px;
+  }
+
+  .slider-btn {
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+/* ===== ALUMNI SECTION ===== */
+.alumni {
+  margin: 4rem 0;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Section title */
+.alumni h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #2c3e50;
+}
+
+/* Subsection headings */
+.alumni h1 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: #035333;
+  font-weight: bold;
+}
+
+/* Alumni entries */
+.alumni p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Emphasize names slightly */
+.alumni p strong {
+  font-weight: bold;
+}
+
+/* RESPONSIVE: 1 per row on mobile */
+@media (max-width: 900px) {
+  .team-member {
+    width: 45%;  /* 2 per row on tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .team-member {
+    width: 100%; /* stack on mobile */
+  }
+}
+
+    /* ===== FOOTER ===== */
+footer {
+  background-color: #035333;
+  padding: 0.8rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>Team</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>  
+  <a href="research.html">Research</a>
+  <a href="team.html">Team</a>
+  <a href="publication.html">Publications</a>
+  <a href="join.html">Join us!</a>
+  <a href="news.html">News</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <div class="content-container">
+  <section class="team-section">
+    <div class="team-container">
+
+    <!-- TEAM MEMBER 1 -->
+    <div class="team-member">
+      <div class="member-image1">
+        <img src="Ulrike4.jpg" alt="Ulrike">
+      </div>
+      <h3>Ulrike Topf</h3>
+      <p>Group Leader</p>
+      <a href="Ulrike Topf.html" class="profile-btn">View Profile</a>
+    </div>
+
+    <!-- TEAM MEMBER 2 -->
+    <div class="team-member">
+      <div class="member-image2">
+        <img src="Monika.jpg" alt="MOnika">
+      </div>
+      <h3>Monika Stasiak</h3>
+      <p>Lab Manager</p>
+      <a href="Monika Stasiak.html" class="profile-btn">View Profile</a>
+    </div>
+
+    <!-- TEAM MEMBER 3 -->
+    <div class="team-member">
+      <div class="member-image3">
+        <img src="Kamila.jpg" alt="Member 3">
+      </div>
+      <h3>Kamila Liput</h3>
+      <p>Postdoctoral Fellow</p>
+      <a href="Kamila Liput.html" class="profile-btn">View Profile</a>
+    </div>
+
+<!-- TEAM MEMBER 4 -->
+    <div class="team-member">
+      <div class="member-image4">
+        <img src="Katarzyna.jpg" alt="Member 1">
+      </div>
+      <h3>Katarzyna Jonak</h3>
+      <p>Postdoctoral Fellow</p>
+      <a href="Katarzyna Jonak.html" class="profile-btn">View Profile</a>
+    </div>
+
+    <!-- TEAM MEMBER 5 -->
+    <div class="team-member">
+      <div class="member-image5">
+        <img src="Arun.jpg" alt="Member 2">
+      </div>
+      <h3>Arun Kumar</h3>
+      <p>Postdoctoral Fellow</p>
+      <a href="Arun Kumar.html" class="profile-btn">View Profile</a>
+    </div>
+
+    <!-- TEAM MEMBER 6 -->
+    
+
+    <!-- TEAM MEMBER 7 -->
+    <div class="team-member">
+      <div class="member-image7">
+        <img src="Spoorthy.jpg" alt="Member 1">
+      </div>
+      <h3>Spoorthy Gowda</h3>
+      <p>PhD Student</p>
+      <a href="Spoorthy Gowda.html" class="profile-btn">View Profile</a>
+    </div>
+
+    <!-- TEAM MEMBER 8 -->
+    <div class="team-member">
+      <div class="member-image8">
+        <img src="Hrudya.png" alt="Member 2">
+      </div>
+      <h3>Hrudya Mohan</h3>
+      <p>PhD Student</p>
+      <a href="Hrudya Mohan.html" class="profile-btn">View Profile</a>
+    </div>
+
+    <!-- TEAM MEMBER 9 -->
+    <div class="team-member">
+      <div class="member-image9">
+        <img src="member3.jpg" alt="Member 3">
+      </div>
+      <h3>Geethika Hareendranath</h3>
+      <p>PhD Student</p>
+      <a href="Geethika Hareendranath.html" class="profile-btn">View Profile</a>
+    </div>
+  </section>
+
+<!-- Image wall -->
+<section class="lab-life">
+  <h2>Life in the Lab</h2>
+
+  <div class="image-slider">
+   <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+
+    <div class="slider-content">
+      <div class="slider-image">
+        <img src="image1.jpg" class="slide active" alt="Slide 1">
+        <img src="image2.jpeg" class="slide" alt="Slide 2">
+        <img src="image3.jpg" class="slide" alt="Slide 3">
+      </div>
+
+      <p class="slide-caption">Life and work in the Topf Lab</p>
+    </div>
+
+    <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+</section>
+
+    <!--Alumni-->
+    <section class="alumni">
+      <h3>Alumni</h3>
+      <h1>PhD students</h1>
+        <p>Ramin Zadalimomen, PhD (2021-2026) - Now: Postdoctoral researcher at University of Graz, Austria</p>
+        <p>Ismail Tahmaz, PhD (2019-2023) - Now: Postdoctoral researcher at IS2M, Mulhouse Materials Science Institute, France</p>
+        <p>Karolina Goscińska, PhD (2017-2022)</p>
+      <h1>Postdoctoral fellows</h1>
+        <p>Somayeh Shahmoradi Ghahe, PhD (2020-2024) - Now: Assitant Professor at Warsaw University, Poland</p>
+      <h1>Undergraduates</h1>
+      <p>Julia Rychta (Internship) - 2026 (Atlantic Technological University Sligo, Ireland)</p>   
+      <p>Małgorzata Kopeć  (Engineering thesis) - 2025 (Warsaw University)</p>        
+        <p>Maja Miążek (Internship) - 2025 (Utrecht University)</p>
+        <p>Agnieszka Grabiec (Internship) - 2023 (Warsaw University of Technology)</p>
+        <p>Mateusz Waluś (Internship) - 2023 (Warsaw University)</p> 
+        <p>Iryna Levkovych (Internship) - 2023 (Warsaw University of Technology)</p>
+        <p>Ayomid Samson (Master student) - 2021/22 </p>
+        <p>Hanna Chmielewska (Internship) - 2022 (Master student at Warsaw University of Technology)</p>
+        <p>Julia Jerzykiewicz (Internship) - 2021 (Master student at University of Wrocław)</p>
+        <p>Sidra Kashif (Internship) - 2020</p>
+      <h1>Laboratory Assistant</h1>
+        <p>Wiktoria Trynkos (Student assistant) - 2025 </p>
+        <p>Marta Płonka (Specialist) - 2020/2021</p>
+        <p>Agata Bieńkowska (Student assistant) - 2019 </p>
+        <p>Sara Domagała (Student assistant) - 2019/2020  </p>
+    </section>
+ </div> 
+</main>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function changeSlide(direction) {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + direction + slides.length) % slides.length;
+  slides[currentSlide].classList.add("active");
+}
+</script>
+
+<footer>
+  © Topf Lab
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const slides = document.querySelectorAll(".slide");
+  const caption = document.querySelector(".slide-caption");
+
+  const captions = [
+    "Team 2023",
+    "Ismail`s PhD defense",
+    "Lab retreat 2022"
+  ];
+
+  let currentSlide = 0;
+  let slideTimer;
+
+  function showSlide(index) {
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide = (index + slides.length) % slides.length;
+
+    slides[currentSlide].classList.add("active");
+    caption.textContent = captions[currentSlide];
+  }
+
+  function changeSlide(direction) {
+    showSlide(currentSlide + direction);
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearInterval(slideTimer);
+
+    slideTimer = setInterval(function () {
+      showSlide(currentSlide + 1);
+    }, 10000);
+  }
+
+  // Make arrow functions available to the HTML buttons
+  window.changeSlide = changeSlide;
+
+  // Initialize caption and automatic rotation
+  caption.textContent = captions[0];
+  resetTimer();
+
+});
+</script>
+</body>
+</html>
