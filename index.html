@@ -8,42 +8,79 @@
   <style>
   /* ===== HOMEPAGE MAIN IMAGE ===== */
 .home-hero {
-  width: 100%;
-  min-height: 480px;
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
 
-  background-image:
-    linear-gradient(
-      rgba(3, 45, 35, 0.20),
-      rgba(3, 45, 35, 0.20)
-    ),
-    url("home3.png");
+    background-color: #176747;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  box-sizing: border-box;
-  padding: 3rem 8%;
-  color: white;
+    box-sizing: border-box;
+    padding: 3rem 8%;
+    color: white;
+}
+
+/* Image slideshow on the right */
+.hero-slideshow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Images */
+.hero-slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+/* Green gradient over the left edge of images */
+.hero-slideshow::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        #176747 0%,
+        rgba(23,103,71,0.65) 25%,
+        rgba(23,103,71,0.10) 75%,
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+/* Text */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
 }
 
 .home-hero h1 {
-  font-size: 2.5rem;
-  max-width: 700px;
-  margin: 0;
-  text-shadow: 1px 2px 5px rgba(0,0,0,0.4);
+    font-size: 2.5rem;
+    max-width: 700px;
+    margin: 0;
+    text-shadow: 1px 2px 5px rgba(0,0,0,0.4);
 }
 
-.home-hero p {
-  font-size: 1.3rem;
-  max-width: 650px;
-  line-height: 1.5;
-  text-shadow: 1px 2px 5px rgba(0,0,0,0.5);
-}
 /* ===== BODY ===== */
 body {
   font-family: "Georgia", "Times New Roman", serif;
@@ -57,7 +94,7 @@ body {
 header {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
-    url("banner1.png");
+    url("images/banner1.png");
   background-size: contain;
   background-position: 5% 0%;
   background-repeat: no-repeat;
@@ -177,15 +214,20 @@ nav a:hover {
 /* Each news box */
 .news-item {
   background-color: rgb(244, 247, 237);
-  padding: 1.5rem;
+  padding: 0.5rem;
   
   flex: 1;                 /* equal width boxes */
   box-sizing: border-box;
 }
 
+.news-item h4 {
+    text-align: center;
+}
+
 .news-item h4 a {
-  color: #035333;
-  text-decoration: none;   /* optional */
+    color: #035333;
+    text-decoration: none;
+    font-size: 1.3rem;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -195,17 +237,44 @@ nav a:hover {
   }
 }
   
-
-
-
-
 /* ===== FOOTER ===== */
 footer {
-  background-color: #035333;
-  padding: 0.8rem 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: white;
+    background-color: #035333;
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    color: white;
+
+    position: relative;
+    text-align: center;
+}
+
+.footer-copy {
+    display: inline-block;
+}
+
+.bluesky-link {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.bluesky-link:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+.bluesky-link img {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+.bluesky-link:hover {
+    opacity: 0.7;
 }
 </style>
 
@@ -220,7 +289,7 @@ footer {
   </p>
   <div class="header-affiliation">
   <span>We are part of</span>
-  <img src="ibb.jpg" alt="Institute of Biochemistry and Biophysics">
+  <img src="images/ibb.jpg" alt="Institute of Biochemistry and Biophysics">
 </div>
 </header>
 
@@ -239,8 +308,21 @@ footer {
 
 <!-- HOMEPAGE MAIN IMAGE -->
 <section class="home-hero">
-  <h1>Understanding and modulating early proteostasis decline in aging</h1>
-  </section>
+
+    <div class="hero-slideshow">
+        <img src="images/background1.png" class="hero-slide active">
+        <img src="images/background2.png" class="hero-slide">
+        <img src="images/background3.png" class="hero-slide">
+        <img src="images/background4.jpg" class="hero-slide">
+        <img src="images/background5.jpg" class="hero-slide">
+    </div>
+
+    <div class="hero-content">
+        <h1>Understanding and modulating early proteostasis decline in aging</h1>
+        
+    </div>
+
+</section>
 
 <main class="main-container">
 
@@ -254,28 +336,38 @@ footer {
   <section class="news">
   <h3 class="news-title">News</h3>
   <div class="news-row">
+    <div class="news-item">
+      <h4><a href="news.html">PhD position open</a></h4>
+      <img src="images/join icon.jpg" alt="join" class="news-image">
+      
+      <p class="date">05-11-2026</p>
+      <p>
+        Interested in molecular biology, aging, and healthspan research. Apply now! <strong>Deadline November 30th</strong>   
+      </p>
+    </div>
 
 <div class="news-item">
-      <img src="kumar.png" alt="Publication image" class="news-image">
+      
       <h4><a href="publication.html">New Preprint</a></h4>
+      <img src="images/kumar.png" alt="Publication image" class="news-image">
       <p class="date">08-10-2026</p>
       <p>
-        The role of the micronutrient zinc for <em>C. elegans</em> proteostasis maintanince during aging <strong>biorxiv</strong>.  
+        The role of the micronutrient zinc for <em>C. elegans</em> proteostasis maintenance during aging <strong>bioRxiv</strong>.  
       </p>
     </div>
 
     <div class="news-item">
-      <img src="Liput.png" alt="Publication image" class="news-image">
       <h4><a href="publication.html">New Preprint</a></h4>
+      <img src="images/Liput.png" alt="Publication image" class="news-image">
       <p class="date">19-07-2026</p>
       <p>
-        Linking ribosome heterogenity with mitochondrial function and lipid metabolism. The role of the Rpl40 paralogs in yeast <em>S. cerevisiae</em> <strong>biorxiv</strong>.  
+        Linking ribosome heterogenity with mitochondrial function and lipid metabolism. The role of the Rpl40 paralogs in yeast <em>S. cerevisiae</em> <strong>bioRxiv</strong>.  
       </p>
     </div>
 
     <div class="news-item">
-      <img src="Jonak.png" alt="Publication image" class="news-image">
       <h4><a href="publication.html">Article published</a></h4>
+      <img src="images/Jonak.png" alt="Publication image" class="news-image">
       <p class="date">30-06-2026</p>
       <p>
         Are ribosomal proteins a source for cellular zinc during stress? Read about our new findings just published in <strong>Redox Biology</strong>. 
@@ -283,8 +375,8 @@ footer {
     </div>
 
     <div class="news-item">
-      <img src="Topf.png" alt="Publication image" class="news-image">
-      <h4><a href="publication.html">Review published</a></h4>      
+      <h4><a href="publication.html">Review published</a></h4>     
+      <img src="images/Topf.png" alt="Publication image" class="news-image">
       <p class="date">31-01-2026</p>
       <p>
         Protein synthesis controlled by molecular chaperones.
@@ -303,8 +395,27 @@ footer {
 
 
 <footer>
-  © Topf Lab
+    <span>© Topf Lab</span>
+
+    <a href="https://bsky.app/profile/topflab.bsky.social"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="bluesky-link">
+    <img src="images/bluesky.svg" alt="Bluesky">
+</a>
 </footer>
 
+<script>
+const slides = document.querySelectorAll(".hero-slide");
+let currentSlide = 0;
+
+setInterval(() => {
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    slides[currentSlide].classList.add("active");
+}, 10000);
+</script>
 </body>
 </html>
